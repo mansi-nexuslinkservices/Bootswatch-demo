@@ -1,0 +1,152 @@
+@web-font-path: "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+.import-web-font-path(@path) when (@path) {
+  @import url("@{path}");
+}
+
+.import-web-font-path(@web-font-path);
+ 
+@import url('../less/variables.less');
+// Navbar
+
+.navbar {
+  &.bg-primary {
+    border: 1px solid @gray-700;
+    background-color: @purple !important;
+    button.btn-secondary{
+      box-shadow:inset 0 2px 12px 0px @purple;
+      background-color: @white;
+      color: @purple;
+      border: 0;
+    }
+    .form-control{
+      background-color: @black;
+      border: 0;
+    }
+  }
+
+  &.bg-dark {
+    background-color: @body-bg !important;
+    border: 1px solid @gray-800;
+    box-shadow:inset 0 2px 12px 0px @gray-700;
+    button.btn-secondary{
+      background-color: @purple;
+      color: @white;
+      border: 0;
+    }
+    .form-control{
+      background-color: @black;
+      border: 1px solid @gray-700;
+    }
+  }
+ 
+
+}
+
+// Buttons
+
+.btn{
+  border-radius: 7px;
+  box-shadow: 0 0px 20px 0px @gray-900;
+  border: 2px solid @gray-900;
+  border-bottom-width: 5px;
+  padding: 10px 30px;
+  background: transparent;
+  color: @white;
+  &:hover{
+    box-shadow:  0 5px 10px 0px @light;
+    border-width: 2px !important;
+  }
+}
+
+.input-group .btn{
+  border: 1px solid @gray-600;
+  background-color: @purple;
+  &:hover{
+    box-shadow:  0 5px 10px 0px @light;
+    border-width: 1px !important;
+    
+  }
+}
+// Forms
+
+
+.form-control, .form-select {
+  background-color: transparent;
+  padding: 12px 20px;
+  border: 1px solid @gray-600;
+  box-shadow: 0px 10px 100px 25px @gray-900;
+  color: @white !important;
+  &:disabled,
+  &[readonly] {
+    border-color: transparent;
+    background-color:@gray-700;
+  }
+  &:focus, &:visited{
+    background-color: transparent;
+    color: @white;
+    box-shadow: 0 0 20px 0 @purple;
+    border: 1px solid @purple;
+  }
+}
+select option{
+  color: @white !important;
+  background-color: @black !important;
+}
+.form-check-input:checked{
+  background-color: @purple;
+  border-color: @purple;
+}
+
+.progress{
+ box-shadow: 0 0 5px 0 @gray-400;
+}
+footer a{
+  color: @purple !important;
+}
+body{
+  text-decoration: none;
+  color: rgb(161 161 169);
+  padding: 32px 64px;
+  border-radius: 8px;
+  border: 1px solid rgba(54, 54, 59, 0.6);
+  background: linear-gradient(109.6deg, @black 11.2%, @gray-800 80.2%, @black 98.6%);
+  position: relative;
+  &:after{
+    --gradient-size: 250px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    /* substracting half the size to center gradient with cursor. */
+    top: calc(var(--y-cursor-position, 0) * 1px - var(--gradient-size) / 2);
+    left: calc(var(--x-cursor-position, 0) * 1px - var(--gradient-size) / 2);
+    height: var(--gradient-size);
+    width: var(--gradient-size);
+    border-radius: 50%;
+    background: radial-gradient(@indigo, rgba(@black, .05) 70%);
+    opacity: 0;
+    transition: opacity 700ms;
+  }
+  &:hover:after{
+    opacity: 0.3;
+  }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: @light; 
+  border-radius: 3px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: @purple; 
+  border-radius: 5px;
+}
+

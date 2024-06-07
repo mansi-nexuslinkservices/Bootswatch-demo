@@ -1,0 +1,128 @@
+.navbar.bg-primary {
+  border: 1px solid #282828;
+  background-color: #6f42c1 !important;
+}
+.navbar.bg-primary button.btn-secondary {
+  box-shadow: inset 0 2px 12px 0px #6f42c1;
+  background-color: #fff;
+  color: #6f42c1;
+  border: 0;
+}
+.navbar.bg-primary .form-control {
+  background-color: #000;
+  border: 0;
+}
+.navbar.bg-dark {
+  background-color: #060606 !important;
+  border: 1px solid #222;
+  box-shadow: inset 0 2px 12px 0px #282828;
+}
+.navbar.bg-dark button.btn-secondary {
+  background-color: #6f42c1;
+  color: #fff;
+  border: 0;
+}
+.navbar.bg-dark .form-control {
+  background-color: #000;
+  border: 1px solid #282828;
+}
+.btn {
+  border-radius: 7px;
+  box-shadow: 0 0px 20px 0px #221b3c;
+  border: 2px solid #221b3c;
+  border-bottom-width: 5px;
+  padding: 10px 30px;
+  background: transparent;
+  color: #fff;
+}
+.btn:hover {
+  box-shadow: 0 5px 10px 0px #222;
+  border-width: 2px !important;
+}
+.input-group .btn {
+  border: 1px solid #555;
+  background-color: #6f42c1;
+}
+.input-group .btn:hover {
+  box-shadow: 0 5px 10px 0px #222;
+  border-width: 1px !important;
+}
+.form-control,
+.form-select {
+  background-color: transparent;
+  padding: 12px 20px;
+  border: 1px solid #555;
+  box-shadow: 0px 10px 100px 25px #221b3c;
+  color: #fff !important;
+}
+.form-control:disabled,
+.form-select:disabled,
+.form-control[readonly],
+.form-select[readonly] {
+  border-color: transparent;
+  background-color: #282828;
+}
+.form-control:focus,
+.form-select:focus,
+.form-control:visited,
+.form-select:visited {
+  background-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 20px 0 #6f42c1;
+  border: 1px solid #6f42c1;
+}
+select option {
+  color: #fff !important;
+  background-color: #000 !important;
+}
+.form-check-input:checked {
+  background-color: #6f42c1;
+  border-color: #6f42c1;
+}
+.progress {
+  box-shadow: 0 0 5px 0 #adafae;
+}
+footer a {
+  color: #6f42c1 !important;
+}
+body {
+  text-decoration: none;
+  color: #a1a1a9;
+  padding: 32px 64px;
+  border-radius: 8px;
+  border: 1px solid rgba(54, 54, 59, 0.6);
+  background: linear-gradient(109.6deg, #000 11.2%, #222 80.2%, #000 98.6%);
+  position: relative;
+}
+body:after {
+  --gradient-size: 250px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  /* substracting half the size to center gradient with cursor. */
+  top: calc(var(--y-cursor-position, 0) * 1px - var(--gradient-size) / 2);
+  left: calc(var(--x-cursor-position, 0) * 1px - var(--gradient-size) / 2);
+  height: var(--gradient-size);
+  width: var(--gradient-size);
+  border-radius: 50%;
+  background: radial-gradient(#6610f2, rgba(0, 0, 0, 0.05) 70%);
+  opacity: 0;
+  transition: opacity 700ms;
+}
+body:hover:after {
+  opacity: 0.3;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 3px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6f42c1;
+  border-radius: 5px;
+}
